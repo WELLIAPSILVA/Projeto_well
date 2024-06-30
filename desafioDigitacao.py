@@ -3,8 +3,8 @@ import pyperclip #permite digitar com carecteres epeciais, porém te que usar fu
 
 
 def escrever_frase(frase): #function
-    pyperclip.copy(frase) #opia a frase da função
-    pyautogui.hotkey('ctrl','v') #copiar
+    pyperclip.copy(frase) #copia a frase da função
+    pyautogui.hotkey('ctrl','v') #colar
 #mover o mouse ate o camp de digitar
 pyautogui.moveTo(981,85,duration=2)
 #clicar no campo de digitar
