@@ -17,3 +17,6 @@ pyautogui.press('tab')
 sleep(1)
 #apertar espaço
 pyautogui.press('space')
+
+#digite o codigo abaixo para ver todas as teclas que pode digiar
+#print(pyautogui.KEYBOARD_KEYS) #Deixei comenta do pra gravar
