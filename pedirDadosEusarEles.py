@@ -14,3 +14,6 @@ elif resposta == 'não':
         print('Encerrando automação')
 else:
         print('Operação cancelada')
+
+#solicitar senha
+pyautogui.password(text='Digita sua senha',title='dados de login', mask='*')
