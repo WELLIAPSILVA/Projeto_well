@@ -16,4 +16,4 @@ else:
         print('Operação cancelada')
 
 #solicitar senha
-pyautogui.password(text='Digita sua senha',title='dados de login', mask='*')
+senha= pyautogui.password(text='Digita sua senha',title='dados de login', mask='*')
