@@ -52,3 +52,16 @@ public=page= pa.locateCenterOnScreen('publicacoes.png')#navega a ate a escria pu
 pa.moveTo(public[0],public[1])
 pa.move(0,-40,duration=0.5)
 pa.click()
+sleep(5)
+coracao= pa.locateCenterOnScreen('coracao.png')
+coracao2= pa.locateCenterOnScreen('coracao2.png')
+if coracao is not None:
+    sleep(86400)
+elif coracao == None:
+    pa.click(coracao2[0],coracao2[1],duration=1)
+    sleep(3)
+    pa.move(40,0,duration=0.5)
+    pa.click()
+    pa.typewrite('gostei desta foto')
+    pa.press('enter')
+    sleep(86400)
