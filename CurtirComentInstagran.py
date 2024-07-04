@@ -48,5 +48,6 @@ page= pa.locateCenterOnScreen('nike.png')#clicar em 'not now' para não salvar n
 pa.click(page[0],page[1],duration=0.5)
 sleep(3)
 public=page= pa.locateCenterOnScreen('publicacoes.png')#navega a ate a escria publicações proximo a ultima publicação
-pa.moveTo(public[0],public[1],duration=0.5)
-sleep(5)
+pa.moveTo(public[0],public[1])
+pa.move(0,-40,duration=0.5)
+pa.click()
