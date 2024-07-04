@@ -44,6 +44,9 @@ sleep(5)
 lupa=pa.locateCenterOnScreen('buscar.png')#clicar em buscar para digitar a pagina
 pa.click(lupa[0],lupa[1],duration=0.5)
 sleep(3)
+pa.move(60,-80,duration=0.5)
+pa.click()
+sleep(3)
 pa.typewrite(pagina)#digitando a pagina
 sleep(6)
 page= pa.locateCenterOnScreen('nike.png')#clicar em 'nike
@@ -51,14 +54,15 @@ pa.click(page[0],page[1],duration=0.5)
 sleep(3)
 public=page= pa.locateCenterOnScreen('publicacoes.png')#navega a ate a escria publicações proximo a ultima publicação
 pa.moveTo(public[0],public[1])
-pa.move(0,-40,duration=0.5)
+pa.move(0,40,duration=0.5)
 pa.click()
 sleep(5)
 coracao= pa.locateCenterOnScreen('coracao.png')
-coracao2= pa.locateCenterOnScreen('coracao2.png')
+sleep(1)
 if coracao is not None:
     sleep(86400)
 elif coracao == None:
+    coracao2= pa.locateCenterOnScreen('coracao2.png')
     pa.click(coracao2[0],coracao2[1],duration=1)
     sleep(3)
     pa.move(40,0,duration=0.5)
