@@ -43,8 +43,9 @@ pa.click(save[0],save[1],duration=0.5)
 sleep(5)
 lupa=pa.locateCenterOnScreen('buscar.png')#clicar em buscar para digitar a pagina
 pa.click(lupa[0],lupa[1],duration=0.5)
-sleep(2)
+sleep(3)
 pa.typewrite(pagina)#digitando a pagina
+sleep(2)
 page= pa.locateCenterOnScreen('nike.png')#clicar em 'not now' para não salvar no navegador
 pa.click(page[0],page[1],duration=0.5)
 sleep(3)
