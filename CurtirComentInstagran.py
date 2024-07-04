@@ -45,8 +45,8 @@ lupa=pa.locateCenterOnScreen('buscar.png')#clicar em buscar para digitar a pagin
 pa.click(lupa[0],lupa[1],duration=0.5)
 sleep(3)
 pa.typewrite(pagina)#digitando a pagina
-sleep(2)
-page= pa.locateCenterOnScreen('nike.png')#clicar em 'not now' para não salvar no navegador
+sleep(6)
+page= pa.locateCenterOnScreen('nike.png')#clicar em 'nike
 pa.click(page[0],page[1],duration=0.5)
 sleep(3)
 public=page= pa.locateCenterOnScreen('publicacoes.png')#navega a ate a escria publicações proximo a ultima publicação
