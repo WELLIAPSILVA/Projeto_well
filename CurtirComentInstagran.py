@@ -16,6 +16,9 @@ bot de curdidas e comentario instagram
 13- se não tiver curtido comentar a foto
 14- pausar por 24 horas
 15- após 24 hora rodar tudo de novo
+
+##o codigo abaixo foi feito pra rodar no nevegador ficando do lado esquerdo da tela dividida
+alocada no lado direito do meu monitor de 24'
 '''   
 import pyautogui as pa 
 import webbrowser as wb 
@@ -24,6 +27,12 @@ from time import sleep
 login= pa.prompt(text='Digite seu login',title='login')#solicita o usuario
 senha= pa.password(text='Digite sua senha',title='senha',mask='*')#solicita a senha
 pagina= pa.prompt(text='Digite o nome da pagina a buscar',title='Pagina do insta')#solicita a pagina a buscar
+
+def logout():
+    pa.click(1891,166,duration=1)
+    pa.click(1009,1005,duration=1)
+    pa.click(1126,1001,duration=1)
+
 while True:
     wb.open_new('https://www.instagram.com/')
     sleep(4)
@@ -61,6 +70,7 @@ while True:
     coracao= pa.locateCenterOnScreen('coracao.png')
     sleep(1)
     if coracao is not None:
+        logout()
         sleep(86400)
     elif coracao == None:
         coracao2= pa.locateCenterOnScreen('coracao2.png')
@@ -70,4 +80,5 @@ while True:
         pa.click()
         pa.typewrite('gostei desta foto')
         pa.press('enter')
+        logout()
         sleep(86400)
