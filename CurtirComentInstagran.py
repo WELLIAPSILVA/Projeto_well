@@ -47,7 +47,7 @@ while True:
     pa.typewrite(senha)
     pa.move(-30,50,duration=1)#clica no botao de login
     pa.click(duration=1)
-    sleep(5)
+    sleep(10)
     save=pa.locateCenterOnScreen('agoraNao.png')#clicar em 'not now' para não salvar no navegador
     pa.click(save[0],save[1],duration=0.5)
     sleep(5)
