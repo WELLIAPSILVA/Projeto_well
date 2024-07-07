@@ -19,9 +19,9 @@ for telefone in telefones:
     webbrowser.open(f'https://api.whatsapp.com/send?phone={telefone}')
     sleep(10)
     pyautogui.click(2382,249,duration=1)
-    sleep(10)
-    escrever= pyautogui.locateCenterOnScreen('mensagenWahts.png')
-    pyautogui.cli(escrever[0],escrever[1])
+    sleep(3)
+    #escrever= pyautogui.locateCenterOnScreen('mensagenWahts.png') ## aqui seria pra pegar posição de cliar em escrever automaticamente
+    pyautogui.click(1427,786) #clicar em escrever
     sleep(2)
     pyautogui.typewrite('Gostaria de fazer uma visita ao zoologico amanha?')
     sleep(5)
