@@ -13,7 +13,7 @@ import webbrowser
 import pyautogui
 from time import sleep
 
-telefones = [5545991178776]
+telefones = [5545990000]
 
 for telefone in telefones:
     webbrowser.open(f'https://api.whatsapp.com/send?phone={telefone}')
