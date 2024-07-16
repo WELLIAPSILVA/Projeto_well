@@ -6,7 +6,7 @@ pyautogui.alert(text='Antes de continuar, por favor abra o Whatsapp no windows!'
 
 pyautogui.alert(text='Os números a seguir devem ser digitados como o exemplo 5545numero, sendo cod pais, cod ddd, número',title='Alerata sobre o formato')
 
-fone= pyautogui.prompt(text='Digite os fonres separados por virgula:',title='Telefones') #pede pro usuario digitar a lista 
+fone= pyautogui.prompt(text='Digite os fones separados por virgula:',title='Telefones') #pede pro usuario digitar a lista 
 mensagem= pyautogui.prompt(text='Digite a mensagema ser enviada:',title='Mesagem') #pede para digitar mensagem
 telefones= [x.strip() for x in fone.split(',')]#transforma os numeros digitados em uma lista legivel ao pyton
 
