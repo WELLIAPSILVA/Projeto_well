@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from time import sleep
 import datetime
-import pyautogui
+import wget
 
 '''
 Este codigo dever ser executado sempre após o almoço que é quando é gerada a cotação no CEASA
@@ -28,7 +28,7 @@ def iniciar_driver():
 
     return driver
 #extrair dia atual para usar como referencia no xpath
-dia_atual = str(datetime.datetime.now().day-1)
+dia_atual = str(datetime.datetime.now().day)
 #gera xpath com o dia atual como codigo de refencia
 xpath =str(f'//div[@class="spoiler"][3]/div//div[@class="row row-2"]//div[1]//p[{dia_atual}]/span/a')
 #abrir site
@@ -50,9 +50,10 @@ sleep(1)
 dia = driver.find_element(By.XPATH,xpath)
 dia.click()
 sleep(5)
-
-#clicar em dowload
-#Download= driver.find_element(By.XPATH,'//button[@aria-label="Fazer download deste documento"]').click()
+#xtrair link do pdf
+link_pdf= dia.get_attribute('href')
+#baixar o pdf
+wget.download(link_pdf,'CEASA.pdf')
 
 sleep(10)
 driver.quit()
