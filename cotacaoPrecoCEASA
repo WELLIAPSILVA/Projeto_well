@@ -1,15 +1,10 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from time import sleep
 import datetime
 import wget
 
-'''
-Este codigo dever ser executado sempre após o almoço que é quando é gerada a cotação no CEASA
-'''
 
 def iniciar_driver():
     chrome_options = Options()
@@ -23,8 +18,7 @@ def iniciar_driver():
         'profile.default_content_setting_values.automatic_downloads': 1,
 
     })
-    driver = webdriver.Chrome(service=ChromeService(
-        ChromeDriverManager().install()), options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
 
     return driver
 #extrair dia atual para usar como referencia no xpath
@@ -53,7 +47,7 @@ sleep(5)
 #xtrair link do pdf
 link_pdf= dia.get_attribute('href')
 #baixar o pdf
-wget.download(link_pdf,'CEASA.pdf')
+wget.download(link_pdf,f'CEASA{dia_atual}.pdf')
 
 sleep(10)
 driver.quit()
